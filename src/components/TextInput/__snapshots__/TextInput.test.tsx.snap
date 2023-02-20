@@ -1,0 +1,29 @@
+// Vitest Snapshot v1
+
+exports[`TextInput > should render a text input 1`] = `
+<div>
+  <div
+    class="flex flex-row items-center relative w-min"
+  >
+    <input
+      class="py-2 px-3 pr-7 border border-gray-200 rounded-md"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`TextInput > should render a text input with a custom class 1`] = `
+<div>
+  <div
+    class="flex flex-row items-center relative w-min"
+  >
+    <input
+      class="py-2 px-3 pr-7 border border-gray-200 rounded-md custom-class"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;

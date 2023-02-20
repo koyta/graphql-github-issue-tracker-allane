@@ -1,0 +1,38 @@
+query RepositoryIssues(
+  $repositoryName: String!
+  $repositoryOwner: String!
+  $states: [IssueState!]
+  $first: Int!
+  $after: String
+  $filterBy: IssueFilters
+) {
+  repository(name: $repositoryName, owner: $repositoryOwner) {
+    id
+    issues(
+      states: $states
+      first: $first
+      after: $after
+      orderBy: { field: UPDATED_AT, direction: DESC }
+      filterBy: $filterBy
+    ) {
+      totalCount
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+      edges {
+        cursor
+        node {
+          id
+          number
+          title
+          body
+          state
+          comments {
+            totalCount
+          }
+        }
+      }
+    }
+  }
+}

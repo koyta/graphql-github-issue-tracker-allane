@@ -1,0 +1,31 @@
+query RepositoryIssueComments(
+  $repositoryOwner: String!
+  $repositoryName: String!
+  $issueNumber: Int!
+  $first: Int!
+  $after: String
+) {
+  repository(owner: $repositoryOwner, name: $repositoryName) {
+    id
+    issue(number: $issueNumber) {
+      id
+      comments(first: $first, after: $after) {
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
+        edges {
+          cursor
+          node {
+            id
+            body
+            author {
+              login
+              avatarUrl
+            }
+          }
+        }
+      }
+    }
+  }
+}

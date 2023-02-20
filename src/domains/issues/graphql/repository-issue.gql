@@ -1,0 +1,18 @@
+query RepositoryIssue(
+  $repositoryOwner: String!
+  $repositoryName: String!
+  $issueNumber: Int!
+) {
+  repository(owner: $repositoryOwner, name: $repositoryName) {
+    id
+    issue(number: $issueNumber) {
+      id
+      number
+      title
+      body
+      author {
+        login
+      }
+    }
+  }
+}

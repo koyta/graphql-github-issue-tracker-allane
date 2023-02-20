@@ -1,0 +1,30 @@
+// Vitest Snapshot v1
+
+exports[`RepositoryIssueListItem > should render successfully 1`] = `
+<body>
+  <div>
+    <a
+      href="/repos/owner/name/issues/100"
+    >
+      <div
+        class="flex flex-col p-2 rounded-md transition-colors hover:bg-gray-100 border-2 border-transparent hover:border-gray-100"
+      >
+        <h4
+          class="font-bold"
+        >
+          title
+        </h4>
+        <p
+          class="text-base line-clamp-2"
+        >
+          body
+        </p>
+        <p>
+          Comments: 
+          10
+        </p>
+      </div>
+    </a>
+  </div>
+</body>
+`;
